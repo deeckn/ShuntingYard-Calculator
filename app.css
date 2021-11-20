@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    max-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #D9D8DF;
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-areas:
+        "title      title       title       title"
+        "screen     screen      screen      screen"
+        "seven      eight       nine        multiply"
+        "four       five        six         divide"
+        "one        two         three       subtract"
+        "zero       clear       equals      plus";
+    border: 3px solid #F7D7D4;
+    border-radius: 24px;
+    background-color: #F6F6F7;
+    padding: 2rem;
+    padding-top: 4rem;
+}
+
+.key {
+    padding: 2rem;
+    background-color: #B0C2D7;
+    border-radius: 12px;
+    width: 7rem;
+    height: 7rem;
+    margin: .5rem;
+    text-align: center;
+    color: #F6F6F7;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+.key:hover {
+    border: 5px solid #E4C2C7;
+}
+
+p {
+    height: 100%;
+    font-size: 2rem;
+    vertical-align: middle;
+}
+
+h1 {
+    grid-area: title;
+    text-align: center;
+    padding-bottom: 2rem;
+    font-weight: 300;
+}
+
+#screen {
+    background-color: #E4C2C7;
+    grid-area: screen;
+    text-align: right;
+    height: 8rem;
+    margin: .5rem;
+    padding-right: 2rem;
+    border-radius: 12px;
+    font-size: 2.5rem;
+}
+
+#one { grid-area: one; }
+#two { grid-area: two; }
+#three { grid-area: three; }
+#four { grid-area: four; }
+#five { grid-area: five; }
+#six { grid-area: six; }
+#seven { grid-area: seven; }
+#eight { grid-area: eight; }
+#nine { grid-area: nine; }
+#zero { grid-area: zero; }
+#clear { grid-area: clear; }
+#plus { grid-area: plus; }
+#multiply { grid-area: multiply; }
+#divide { grid-area: divide; }
+#subtract { grid-area: subtract; }
+#equals { 
+    grid-area: equals; 
+    width: auto;
+}
